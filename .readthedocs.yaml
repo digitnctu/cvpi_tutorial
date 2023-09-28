@@ -23,8 +23,8 @@ python:
     - method: pip
       path: .
       extra_requirements:
-      -sphinxcontrib-plantuml
-      -sphinxcontrib-wavedrom
+      - sphinxcontrib-plantuml
+      - sphinxcontrib-wavedrom
 
 # Build documentation in the "docs/" directory with Sphinx
 sphinx:
