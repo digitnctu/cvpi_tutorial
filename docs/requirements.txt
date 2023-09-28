@@ -1,3 +1,4 @@
 sphinxcontrib-wavedrom
 sphinxcontrib-plantuml
 btd.sphinx.graphviz
+sphinx-plantuml
