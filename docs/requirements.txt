@@ -1,0 +1,2 @@
+sphinxcontrib-wavedrom
+sphinxcontrib-plantuml
