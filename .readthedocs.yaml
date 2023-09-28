@@ -21,7 +21,6 @@ build:
 python:
   install:
     - method: pip
-      path: .
       extra_requirements:
       - sphinxcontrib-plantuml
       - sphinxcontrib-wavedrom
