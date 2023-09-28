@@ -10,8 +10,8 @@ Welcome to cvpi_tutorial's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-   tutorial
-   case1   
+   source/tutorial
+   source/case1   
 
 
 .. ::
