@@ -15,7 +15,7 @@ release = '0.1'
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 extensions = ['sphinxcontrib.plantuml','sphinx.ext.graphviz','sphinxcontrib.wavedrom']
-plantuml = 'java -jar plantuml-1.2023.1.jar'
+#plantuml = 'java -jar plantuml-1.2023.1.jar'
 render_using_wavedrompy = True
 
 templates_path = ['_templates']
