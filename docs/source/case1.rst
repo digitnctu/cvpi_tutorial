@@ -54,7 +54,6 @@ case1 驅動程式界面
 
 .. uml::
 	:caption: arch 架構
-        ditaa(-E -S, scale=1.2)
 
 	+-----------+ +------------------------+
  	| cBLU      | | cGRE                   |
