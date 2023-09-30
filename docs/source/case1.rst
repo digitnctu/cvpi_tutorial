@@ -8,7 +8,7 @@ case1 驅動程式界面
 
 在這個案例中，驗證程式提供的驅動程式界面。從架構圖來看 arch_ ，驅動程式放在librw.so裏；而驗證程式libreg.so實現了讀/寫驅動時序如 wave_ ； reg_if是我們要驗證的DUT，被放在top模組內。libpattern.so註冊我們的VPI function $hello，提供了我們驗證程式的進入點，同時結合libreg.so以及librw.so來提供驗證功能。
 
-當在DUT呼叫$hello時，驗證程式會啟動執行緒並在此執行緒呼叫在librw.so中entry_point函數，等待驅動程式呼叫實現於libreg.so的issue_r/issue_w函數。
+當在DUT呼叫$hello時，驗證程式會啟動執行緒並在此執行緒呼叫位於librw.so中entry_point函數，定時確認驅動程式是否呼叫實現於libreg.so的issue_r/issue_w函數。
 
 ..
 	這個項目是SW/HW同時模擬的例子。SW透過函數對HW(reg_if)讀寫。根據 arch_ 可以了解：SW的一系列讀寫程序寫在entry_point的函數內編譯成共享程式庫(shared-library)librw.so，使用程式將entry_point當作SW的進入點。上述的讀寫函數是由libreg.so這個程式連所提供。在這些函數中，libreg.so將利用CVPI所提供的工具實現 wave_ 的讀寫時序，以完成和HW(reg_if)溝通的目的。
