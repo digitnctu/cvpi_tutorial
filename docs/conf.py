@@ -22,7 +22,7 @@ templates_path = ['_templates']
 exclude_patterns = []
 # online_wavedrom_js_url = 'albert'
 
-language = 'big5'
+language = 'zh_TW'
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
