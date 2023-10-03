@@ -78,7 +78,7 @@ case2 模組取代
 參數取代
 ---------------------
 
-如 wave2_ 相較case1，case3的verilog引進了一些訊號：req、ack以及seq_ack。當req為1時，代表要對adr/wdat處理，直到ack為1結束。ack是否為1，是由8位元的seq_ack來決定。seq_ack在每個clock時向左移1位元，而當seq_ack的最高位元為1時，ack也同時為1。由於seq_ack有限的位元數，摸擬adr/wdat處理時間長於seq_ack的位元數時，seq_ack需要動態地更動給值。
+如 wave2_ 相較case1，case3的verilog引進了一些訊號：req、ack以及seq_ack。當req為1時，代表要對adr/wdat處理，直到ack為1結束。ack是否為1，是由8位元的seq_ack來決定。seq_ack在每個clock時向左移1位元，而當seq_ack的最高位元為1時，ack也同時為1。由於seq_ack有限的位元數，模擬adr/wdat處理時間長於seq_ack的位元數時，seq_ack需要動態地更動給值。
 
 針對上面seq_ack的問題：case3具有命令列指定參數，可以動態地更動seq_ack而產生不一樣的測試項目(pattern)，而不需要從新翻譯。針對這種動態更動參數引起了一個想法，我們可不可以利用CVPI來實現這個動態更動參數。case4/case5就是對這個想法的實現。case4是利用註冊/觸動callback函數;而case5則是利用內嵌腳本語言(python)，使用這個腳本語言動態地更動seq_ack。
 
